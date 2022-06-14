@@ -3,7 +3,10 @@ import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 
-class Background extends Component {
+interface myProps {
+    count: number
+}
+class Background extends Component<myProps> {
 
     async customInit(engine: Engine): Promise<void> {
         await loadStarsPreset(engine);
@@ -21,7 +24,7 @@ class Background extends Component {
                 color: {
                     "value": ["#fbb03b", "#ffffff"]
                 },
-                number: { value: 64 }
+                number: { value: this.props.count }
             },
             preset: "stars"
         }

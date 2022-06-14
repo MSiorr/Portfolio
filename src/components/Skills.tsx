@@ -5,21 +5,20 @@ import { gearProps } from './sub/Gear';
 import GearBase from './sub/GearBase';
 import TechnologyBox from './sub/TechnologyBox';
 
-// interface myProps { }
+// import techData from '../data/technologies.json';
+import { withTranslation, WithTranslation } from 'react-i18next';
 
-interface myState {
-    technologies: string[]
+interface oneTech {
+    name: string,
+    info: string[]
 }
 
-class Skills extends Component<mobileStatus, myState> {
+interface myProps extends mobileStatus, WithTranslation { }
+
+class Skills extends Component<myProps> {
     constructor(props: any = null) {
         super(props);
 
-        this.state = {
-            technologies: [
-                "JavaScript", "TypeScript", "HTML", "CSS", "React", "React Native", "Node.JS", "Express", "Python", "Unity"
-            ]
-        }
     }
 
     render() {
@@ -27,13 +26,16 @@ class Skills extends Component<mobileStatus, myState> {
             { isTop: true, isLeft: true, x: '0px', y: '14%', size: 'xl' },
             { isTop: false, isLeft: false, x: '0px', y: '14%', size: 'xl' }
         ]
+        let techData: Array<oneTech> = this.props.t("Skills.technologies", { returnObjects: true });
+
         return (
             <div id="skills" className='dataComponent'>
-                <CompHeader title={"UMIEJĘTNOŚCI"} />
+                <CompHeader title={this.props.t("Header.skills")} />
                 <section className='restrictedWidth restrictedHeight'>
-                    <p id="favTech">Ulubione technologie z którymi miałem styczność</p>
+                    <p id="favTech">{this.props.t("Skills.info")}</p>
                     <div id="technologiesDiv">
-                        {this.state.technologies.map((e, i) => <TechnologyBox name={e} swap={i % 2 === 0} key={`tech_${i}`} />)}
+                        {techData.map((e, i) => <TechnologyBox name={e.name} info={e.info} swap={i % 2 === 0} key={`tech_${i}`} />)}
+                        {/* {techData.technologies.map((e, i) => <TechnologyBox name={e.name} info={e.info} swap={i % 2 === 0} key={`tech_${i}`} />)} */}
                         {/* {this.state.technologies.map((e, i) => <TechnologyBox name={e} swap={Math.floor((i + 1) / 2) % 2 == 0} key={`tech_${i}`} />)} */}
                     </div>
                 </section>
@@ -44,4 +46,4 @@ class Skills extends Component<mobileStatus, myState> {
 }
 
 
-export default Skills;
+export default withTranslation()(Skills);

@@ -7,9 +7,12 @@ import { gearProps } from './sub/Gear';
 import GearBase from './sub/GearBase';
 import { mobileStatus } from './Page';
 
+import { withTranslation, WithTranslation } from 'react-i18next';
+
+interface myProps extends mobileStatus, WithTranslation { }
 
 
-class Contact extends Component<mobileStatus> {
+class Contact extends Component<myProps> {
     render() {
         let gearsData: gearProps[] = [
             { isTop: true, isLeft: true, x: '0px', y: '14%', size: 'xl' },
@@ -17,15 +20,15 @@ class Contact extends Component<mobileStatus> {
         ]
         return (
             <div id="contact">
-                <CompHeader title="KONTAKT" />
+                <CompHeader title={this.props.t("Header.contact")} />
                 <section className='restrictedWidth'>
                     <div id="contactInfo">
                         <div id="writeToMe">
-                            <h1>Napisz do mnie</h1>
+                            <h1>{this.props.t("Contact.contactMe")}</h1>
                             <a href="/#"> <img alt="GitHub icon" src={letterIcon} /> michaldakol@gmail.com</a>
                         </div>
                         <div id="myGithub">
-                            <h1>Mój GitHub</h1>
+                            <h1>{this.props.t("Contact.myGit")}</h1>
                             <a href="/#"> <img alt="GitHub icon" src={gitHubIcon} /> MSiorr</a>
                         </div>
                     </div>
@@ -37,4 +40,4 @@ class Contact extends Component<mobileStatus> {
 }
 
 
-export default Contact;
+export default withTranslation()(Contact);

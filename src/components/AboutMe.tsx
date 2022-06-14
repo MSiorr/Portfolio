@@ -4,9 +4,13 @@ import CompHeader from './sub/CompHeader';
 import { gearProps } from './sub/Gear';
 import GearBase from './sub/GearBase';
 
+import { withTranslation, WithTranslation } from 'react-i18next';
 
+interface myProps extends mobileStatus, WithTranslation {
 
-class AboutMe extends Component<mobileStatus> {
+}
+
+class AboutMe extends Component<myProps> {
     constructor(props: any = null) {
         super(props)
     }
@@ -18,14 +22,14 @@ class AboutMe extends Component<mobileStatus> {
         ]
         return (
             <div id="aboutMe" className='dataComponent'>
-                <CompHeader title={"O MNIE"} />
+                <CompHeader title={this.props.t("Header.aboutMe")} />
                 <section className='restrictedWidth restrictedHeight'>
-                    <p>
-                        Cześć! Jestem Michał i mam 20 lat. Swoją przygodę z programowaniem zacząłem 4 lata temu.
-                        Najlepiej czuję się w tworzeniu stron internetowych, aplikacji mobilnych oraz gier.
+                    <p id="hi">{this.props.t("AboutMe.hi")}</p>
+                    <p id="infoAboutMe">
+                        {this.props.t("AboutMe.info1")}
                     </p>
-                    <p>
-                        Obecnie ukończyłem technikum informatyczne.
+                    <p id="experience">
+                        {this.props.t("AboutMe.info2")}
                     </p>
                 </section>
                 <GearBase gearsData={gearsData} mobile={this.props.mobile} />
@@ -36,4 +40,4 @@ class AboutMe extends Component<mobileStatus> {
 
 
 
-export default AboutMe;
+export default withTranslation()(AboutMe);

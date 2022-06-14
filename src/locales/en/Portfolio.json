@@ -1,8 +1,9 @@
 {
+    "play": "PLAY",
     "projects": [
         {
             "title": "Wolfenstein 3D",
-            "description": "Kopia gry Wolfenstein 3D na przeglądarke napisana w TypeScript. Na potrzeby porjektu napisany został własny silnik 3D. Dostępny jest pierwszy poziom, oraz większość mechanik z oryginalnej gry.",
+            "description": "Recreation of Wolfenstein 3D in browser written in TypeScript with custom 3D engine. Complete with first level and most of the mechanics from the original game.",
             "technologies": [
                 "TypeScript",
                 "WebGL",
@@ -15,7 +16,7 @@
         },
         {
             "title": "Castle Royale",
-            "description": "Logiczna gra multiplayer 1v1 napisana w 2 osoby. Celem jest dotacie postaciami w odpowiednie miejsca.",
+            "description": "Logical 1v1 multiplayer game written in a team of two. The goal is to get the characters to the right places.",
             "technologies": [
                 "Three.JS",
                 "Sass",
@@ -32,7 +33,7 @@
         },
         {
             "title": "Dr Mario",
-            "description": "Kopia gry Dr Mario napisna w JavaScript. Dostępna jest gra na 1 osobę ze wszystkimi mechanikami.",
+            "description": "Recreation of Dr Mario game written in JavaScript. Complete with a singleplayer mode with all mechanics is available.",
             "technologies": [
                 "JavaScript",
                 "HTML",
@@ -43,7 +44,7 @@
         },
         {
             "title": "Ludo",
-            "description": "Projekt gry Chińczyk, opartej na kontakcie serwera z kilentem. Została tutaj zastosowana technika Ajax Long Polling.",
+            "description": "Design of a Ludo game based on server-client interaction. The Ajax Long Polling technique is used here.",
             "technologies": [
                 "JavaScript",
                 "HTML",
@@ -56,7 +57,7 @@
         },
         {
             "title": "Threejs Shooter",
-            "description": "Projekt gry 3D, pozwalający na stworzenie własnego poziomu, a następnie na próbe jego przejścia. Dostępna jest również tabela wyników.",
+            "description": "3D shooter game, allowing you to create your own level and then attempt to finish it. Scoreboard of highest scores is available.",
             "technologies": [
                 "Three.JS",
                 "JavaScript",

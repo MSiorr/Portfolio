@@ -3,8 +3,13 @@ import { mobileStatus } from './Page';
 import { gearProps } from './sub/Gear';
 import GearBase from './sub/GearBase';
 
+import { withTranslation, WithTranslation } from 'react-i18next';
 
-class Home extends Component<mobileStatus> {
+interface myProps extends mobileStatus, WithTranslation {
+
+}
+
+class Home extends Component<myProps> {
     render() {
         let gearsData: gearProps[] = [
             { isTop: true, isLeft: true, x: '0px', y: '14%', size: 'xl' },
@@ -13,7 +18,7 @@ class Home extends Component<mobileStatus> {
         return (
             <div id="home">
                 <div id="homeTxt">
-                    <h1 id="homeTitle">MICHAŁ ŚLĘZAK</h1>
+                    <h1 id="homeTitle">{this.props.t("Home.name")}</h1>
                     <h2 id="homeSubTitle">Full stack developer</h2>
                 </div>
                 <GearBase gearsData={gearsData} mobile={this.props.mobile} />
@@ -24,4 +29,4 @@ class Home extends Component<mobileStatus> {
 
 
 
-export default Home;
+export default withTranslation()(Home);

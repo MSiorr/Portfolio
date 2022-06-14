@@ -1,0 +1,102 @@
+{
+    "technologies": [
+        {
+            "name": "JavaScript",
+            "info": [
+                "Funkcje",
+                "Moduły/Klasy",
+                "klasy statyczne",
+                "Listy",
+                "Pętle",
+                "Events"
+            ]
+        },
+        {
+            "name": "TypeScript",
+            "info": [
+                "Typowanie",
+                "Interfejsy",
+                "Enumy",
+                "Generyki"
+            ]
+        },
+        {
+            "name": "HTML",
+            "info": [
+                "Atrybuty",
+                "Encje",
+                "Formularze",
+                "Grafiki",
+                "Media"
+            ]
+        },
+        {
+            "name": "CSS",
+            "info": [
+                "Style",
+                "Flex",
+                "Grid",
+                "Responsywnośc"
+            ]
+        },
+        {
+            "name": "React",
+            "info": [
+                "Komponenty",
+                "Klasy",
+                "Props",
+                "State",
+                "React Navigation",
+                "Hooks"
+            ]
+        },
+        {
+            "name": "React Native",
+            "info": [
+                "Podstawowe komponenty",
+                "Flexbox",
+                "Animacje",
+                "Expo"
+            ]
+        },
+        {
+            "name": "Node.JS",
+            "info": [
+                "System plików",
+                "Events",
+                "Moduł URL",
+                "Metody HTTP"
+            ]
+        },
+        {
+            "name": "Express",
+            "info": [
+                "Socket.io",
+                "Routing",
+                "Metody HTTP",
+                "Ciasteczka"
+            ]
+        },
+        {
+            "name": "Python",
+            "info": [
+                "Funkcje",
+                "Klasy",
+                "TKinter",
+                "Pętle",
+                "Lambda"
+            ]
+        },
+        {
+            "name": "Unity",
+            "info": [
+                "Sprites",
+                "Assets",
+                "Kolizje",
+                "Korutyny",
+                "Rigidbody",
+                "UI"
+            ]
+        }
+    ]
+}

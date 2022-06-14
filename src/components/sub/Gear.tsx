@@ -28,6 +28,7 @@ class Gear extends Component<gearProps, myState> {
     componentDidMount() {
         if (!this.props.mobile) {
             window.addEventListener('scroll', this.calcDeg.bind(this));
+            this.calcDeg();
         }
     }
 

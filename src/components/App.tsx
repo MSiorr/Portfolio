@@ -14,7 +14,7 @@ function App() {
   return (
     <div id="app">
       {/* {detectMobile() ? null : <Background />} */}
-      <Background />
+      <Background count={detectMobile() ? 24 : 64} />
       <Header />
       <Page mobile={detectMobile()} />
       <Footer />

@@ -1,0 +1,103 @@
+{
+    "info": "Favourite technologies I've used",
+    "technologies": [
+        {
+            "name": "JavaScript",
+            "info": [
+                "Functions",
+                "Modules/Classes",
+                "Static classes",
+                "Lists",
+                "Loops",
+                "Events"
+            ]
+        },
+        {
+            "name": "TypeScript",
+            "info": [
+                "Typing",
+                "Interfaces",
+                "Enums",
+                "Generics"
+            ]
+        },
+        {
+            "name": "HTML",
+            "info": [
+                "Attributes",
+                "Entities",
+                "Forms",
+                "Graphics",
+                "Media"
+            ]
+        },
+        {
+            "name": "CSS",
+            "info": [
+                "Styles",
+                "Flex",
+                "Grid",
+                "Responsive layout"
+            ]
+        },
+        {
+            "name": "React",
+            "info": [
+                "Components",
+                "Classes",
+                "Props",
+                "State",
+                "React Navigation",
+                "Hooks"
+            ]
+        },
+        {
+            "name": "React Native",
+            "info": [
+                "Basic components",
+                "Flexbox",
+                "Animations",
+                "Expo"
+            ]
+        },
+        {
+            "name": "Node.JS",
+            "info": [
+                "File system",
+                "Events",
+                "URL Module",
+                "HTTP methods"
+            ]
+        },
+        {
+            "name": "Express",
+            "info": [
+                "Socket.io",
+                "Routing",
+                "HTTP methods",
+                "Cookies"
+            ]
+        },
+        {
+            "name": "Python",
+            "info": [
+                "Functions",
+                "Classes",
+                "TKinter",
+                "Loops",
+                "Lambda"
+            ]
+        },
+        {
+            "name": "Unity",
+            "info": [
+                "Sprites",
+                "Assets",
+                "Collisions",
+                "Coroutines",
+                "Rigidbody",
+                "UI"
+            ]
+        }
+    ]
+}
