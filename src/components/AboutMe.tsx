@@ -48,9 +48,6 @@ class AboutMe extends Component<myProps, myState> {
         let top1 = this.myRef.current?.offsetTop!
         let top2 = this.myRef2.current?.offsetTop!
 
-        console.log(top1, top2);
-
-
         if (!this.state.sTxt && timeToShow(top1 + top2)) {
             this.setState({ sTxt: true })
         }

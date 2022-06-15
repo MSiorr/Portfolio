@@ -44,8 +44,6 @@ class Page extends Component<defaultStatus, myState> {
     }
 
     calcScroll() {
-        console.log(window.scrollY);
-
         this.setState({
             scrollY: window.scrollY
         })
