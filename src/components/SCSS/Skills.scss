@@ -1,0 +1,111 @@
+@import "colors.scss";
+@import "config.scss";
+
+#skills {
+    position: relative;
+
+    section {
+        margin: 8px auto;
+        min-height: calc(100vh - $header-height - $component-title-height - 8px);
+
+        // margin: 0 auto;
+        text-align: center;
+        padding-bottom: 120px;
+
+
+        #favTech {
+            margin: 64px 0;
+            font-size: clamp(20px, 2.6vw, 30px);
+        }
+
+        #technologiesDiv {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+
+            height: 5 * ($technology-box-height + 2 * $technology-box-margin);
+
+            .technologyBox {
+                width: 48%;
+                height: $technology-box-height;
+                border-radius: 12px;
+                background-color: rgba(lighten($bg-color, 6%), 96%);
+                // background-color: $third-color;
+                box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+                margin: $technology-box-margin;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 36px;
+                font-size: clamp(16px, 2.4vw, 20px);
+                transition: transform .2s;
+                opacity: 0;
+
+                &.active {
+                    animation-fill-mode: none;
+                }
+
+                &.active-Right,
+                &.active-Left {
+                    opacity: 1;
+                }
+
+
+                &:hover {
+                    transform: translate(0, -5px) scale(1.02);
+
+                    img {
+                        filter: grayscale(0);
+                    }
+                }
+
+                img {
+                    width: 60%;
+                    filter: grayscale(1);
+                    transition: filter .2s;
+                    border-radius: 6px;
+                }
+
+                p {
+                    margin: 0;
+                }
+
+                .techInfo {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        margin-top: 8px;
+                    }
+                }
+
+                .techData {
+                    width: 70%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $breakpoint-2) {
+    #skills {
+        section {
+            #technologiesDiv {
+
+                height: 10 * ($technology-box-height + 2 * $technology-box-margin);
+
+                .technologyBox {
+                    width: 100%;
+                    padding: 0 18px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

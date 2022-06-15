@@ -1,0 +1,33 @@
+@import "colors.scss";
+@import "config.scss";
+
+#home {
+    width: 100%;
+    color: $main-txt-color;
+    // margin-top: -calc($header-height + $header-start-margin-top);
+    // height: calc(100vh - $header-height);
+    height: 104vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    #homeTxt {
+        // width: 100%;
+        padding: 0 12px;
+
+        #homeTitle {
+            font-size: clamp(40px, 8vw, 80px);
+            ;
+            margin: 0;
+            padding: 0 0;
+        }
+
+        #homeSubTitle {
+            font-size: clamp(20px, 4vw, 40px);
+            margin: 12px 0;
+            padding: 0;
+            color: $my-gray;
+        }
+    }
+}

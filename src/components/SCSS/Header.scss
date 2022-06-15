@@ -1,0 +1,219 @@
+@import "colors.scss";
+@import "config.scss";
+
+header {
+    height: $header-height;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    transition: all .2s;
+    background-color: transparent;
+    transform: none;
+    padding-top: 32px;
+
+    &.shadow {
+        box-shadow: 0px -8px 18px 4px rgba(0, 0, 0, 1);
+        padding-top: 0;
+        height: $header-height;
+        backdrop-filter: blur(4px);
+        background-color: rgba($bg-color, 0.9);
+
+        nav {
+            #leftHead {
+                #logo {
+                    width: 48px;
+                }
+            }
+
+            #rightHead {
+                a {
+                    font-size: $header-font-size;
+                }
+            }
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+
+        #navOver {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+
+
+        }
+
+        #leftHead {
+            display: flex;
+            align-items: center;
+            padding-left: 24px;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                #logo {
+                    width: 56px;
+                    transition: width .2s;
+                    // width: 48px;
+                }
+            }
+
+        }
+
+        #rightHead {
+            display: flex;
+            align-items: center;
+            padding-right: 24px;
+            height: 100%;
+
+            a,
+            div {
+                // height: 100%;
+                // display: block;
+                margin: 0 10px;
+                color: $main-txt-color;
+                text-decoration: none;
+                font-size: calc($header-font-size * 1.15);
+                // font-size: $header-font-size;
+                transition: padding .1s, color .1s, font-size .2s;
+                cursor: pointer;
+
+                &:hover {
+                    color: $second-color;
+                    padding-bottom: 6px;
+                }
+
+                img {
+                    height: calc($header-font-size * 1.6);
+                    padding-top: 8px;
+                }
+            }
+        }
+
+        #hambButton {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // background-color: red;
+            width: 32px;
+            height: 24px;
+            margin-right: 24px;
+            cursor: pointer;
+            display: none;
+
+
+            .hambBtn {
+                width: 32px;
+                height: 2px;
+                border-radius: 12px;
+                background-color: white;
+                transition: all .2s ease-in-out;
+            }
+
+            &.open {
+
+                margin-right: 32px;
+
+                .hambBtn:nth-child(1) {
+                    transform: rotate(-45deg) translateY(16px);
+                }
+
+                .hambBtn:nth-child(2) {
+                    transform: translateX(32px);
+                    background-color: transparent;
+                }
+
+                .hambBtn:nth-child(3) {
+                    transform: rotate(45deg) translateY(-16px);
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: $breakpoint-3) {
+    header {
+        nav {
+            #navOver {
+                &.show {
+                    display: block;
+                }
+
+                &.hide {
+                    display: none;
+                }
+            }
+
+            #hambButton {
+                display: flex;
+                z-index: 100;
+            }
+
+            #rightHead {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+                width: 72vw;
+                top: 0;
+                right: calc(-72vw - 12px);
+                background-color: rgba($third-color, 0.95);
+                box-shadow: -4px 0 8px 2px rgba(0, 0, 0, 0.2);
+                z-index: 2;
+                transition: right .2s, visibility .2s;
+                visibility: hidden;
+
+                &.showNav {
+                    visibility: visible;
+                    right: 0;
+                }
+
+                a,
+                div {
+                    height: 8vh;
+                    margin: 1vh 0;
+                    display: flex;
+                    align-items: center;
+                    font-size: 5vw;
+
+                    &.shadow {
+                        font-size: 5vw;
+                    }
+
+                    img {
+                        height: 5vh;
+                    }
+                }
+
+            }
+        }
+
+        &.shadow {
+            nav {
+                #rightHead {
+                    a {
+                        font-size: 5vw;
+                    }
+                }
+            }
+        }
+    }
+}

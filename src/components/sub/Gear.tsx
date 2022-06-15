@@ -8,7 +8,8 @@ export interface gearProps {
     y: string,
     x: string,
     size: "xs" | "s" | "m" | "l" | "xl",
-    mobile?: boolean
+    mobile?: boolean,
+    scrollY?: number
 }
 
 interface myState {
@@ -25,17 +26,21 @@ class Gear extends Component<gearProps, myState> {
     }
 
 
-    componentDidMount() {
-        if (!this.props.mobile) {
-            window.addEventListener('scroll', this.calcDeg.bind(this));
-            this.calcDeg();
-        }
-    }
+    // componentDidMount() {
+    //     if (!this.props.mobile) {
+    //         window.addEventListener('scroll', this.calcDeg.bind(this));
+    //         this.calcDeg();
+    //     }
+    // }
 
-    componentWillUnmount() {
-        if (!this.props.mobile) {
-            window.removeEventListener('scroll', this.calcDeg.bind(this));
-        }
+    // componentWillUnmount() {
+    //     if (!this.props.mobile) {
+    //         window.removeEventListener('scroll', this.calcDeg.bind(this));
+    //     }
+    // }
+
+    componentDidUpdate() {
+        this.calcDeg();
     }
 
 

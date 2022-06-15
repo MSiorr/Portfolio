@@ -1,0 +1,1 @@
+export const technologyBreakpoint = 1100;

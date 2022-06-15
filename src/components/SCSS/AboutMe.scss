@@ -1,0 +1,36 @@
+@import "colors.scss";
+@import "config.scss";
+
+#aboutMe {
+    position: relative;
+    min-height: calc(102vh - $header-height);
+
+    section {
+        margin: 8px auto;
+        min-height: calc(102vh - $header-height - $component-title-height - 8px);
+        width: 80%;
+
+        p {
+            font-size: clamp(16px, 4vw, 26px);
+            text-align: justify;
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+            text-shadow: 2px 2px 4px black;
+
+            span {
+                color: rgba($second-color, 0.8);
+            }
+        }
+
+        #hi {
+            font-size: clamp(24px, 6vw, 39px);
+            margin-bottom: 4px;
+            // color: rgba($second-color, 0.9);
+            color: rgba(white, 0.9);
+        }
+
+        #infoAboutMe {
+            margin-bottom: 36px;
+        }
+    }
+}

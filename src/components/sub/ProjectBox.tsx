@@ -10,6 +10,7 @@ import ludoImg from "../../gfx/projects/ludo.png";
 import threejsShooterImg from "../../gfx/projects/threejsShooter.png";
 
 import { withTranslation, WithTranslation } from 'react-i18next';
+import { timeToShow } from '../helpers/Functions';
 
 interface IimgSrc {
     [id: string]: string
@@ -29,13 +30,44 @@ interface myProps extends WithTranslation {
     technologies: string[],
     gitLink: string,
     playLink: string,
-    swap: boolean
+    swap: boolean,
+    parentTop: number
 }
 
-class ProjectBox extends Component<myProps> {
+interface myState {
+    show: boolean
+}
+
+class ProjectBox extends Component<myProps, myState> {
+
+    private myRef: React.RefObject<HTMLInputElement>;
+
+    constructor(props: myProps) {
+        super(props)
+
+        this.myRef = React.createRef();
+
+        this.state = {
+            show: false
+        }
+    }
+
+    componentDidUpdate() {
+        this.calculateShow();
+    }
+
+    calculateShow() {
+        let top = this.myRef.current?.offsetTop!
+
+
+        if (!this.state.show && timeToShow(top + this.props.parentTop)) {
+            this.setState({ show: true })
+        }
+    }
+
     render() {
         return (
-            <div className={this.props.swap ? "projectBox reverse" : "projectBox"}>
+            <div className={`${this.props.swap ? "projectBox reverse" : "projectBox"} ${this.state.show ? this.props.swap ? 'active-Left' : 'active-Right' : ''} active`} ref={this.myRef}>
                 <div className="projectImgBox">
                     <img src={imgSrc[this.props.title]} alt="project img" />
                     <div className="imgOverlay"></div>

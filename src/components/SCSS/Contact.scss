@@ -1,0 +1,57 @@
+@import "colors.scss";
+@import "config.scss";
+
+#contact {
+    min-height: calc(364px + $header-height + $footer-height);
+    height: calc(100vh - $header-height - $footer-height);
+    position: relative;
+
+    section {
+        height: max(calc(100% - $component-title-height - 16px), 364px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 16px 0;
+
+        #contactInfo {
+            text-align: center;
+            color: white;
+
+            h1 {
+                font-size: clamp(42px, 6vw, 52px);
+                margin: 20px 0;
+            }
+
+            #writeToMe {
+                margin-bottom: 64px;
+            }
+
+            img {
+                filter: invert(1);
+                width: clamp(32px, 5vw, 44px);
+                margin-right: 16px;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                font-size: clamp(18px, 2.8vw, 24px);
+                color: white;
+                text-decoration: underline;
+                transition: transform .2s;
+
+                &:hover {
+                    color: $second-color;
+                    transform: translate(0, -6px);
+
+                    img {
+                        filter: $filter-to-second;
+                    }
+                }
+            }
+        }
+    }
+}

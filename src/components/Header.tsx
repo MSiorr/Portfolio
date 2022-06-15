@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../gfx/logo.png';
 import polandFlag from '../gfx/poland-svgrepo-com.svg'
 import engFlag from '../gfx/united-kingdom-uk-svgrepo-com.svg'
+import './SCSS/Header.scss';
 
 import i18next from "i18next";
 import { withTranslation, WithTranslation } from 'react-i18next';
@@ -75,18 +76,33 @@ class Header extends Component<myProps, myState> {
                 <nav>
                     <div id="navOver" className={this.state.hambActive ? 'show' : 'hide'}></div>
                     <div id="leftHead">
-                        <a href="#home" onClick={this.disableMenu.bind(this)}><img src={logo} alt="logo" id="logo" /></a>
+                        <a href="#home" className='active active-Scale' onClick={this.disableMenu.bind(this)}><img src={logo} alt="logo" id="logo" /></a>
                     </div>
                     <div id="rightHead" className={this.state.hambActive ? 'showNav' : ''}>
-                        <a href="#aboutMe" onClick={this.disableMenu.bind(this)}>{this.props.t("Header.aboutMe")}</a>
-                        <a href="#skills" onClick={this.disableMenu.bind(this)}>{this.props.t("Header.skills")}</a>
-                        <a href="#portfolio" onClick={this.disableMenu.bind(this)}>{this.props.t("Header.portfolio")}</a>
-                        <a href="#contact" onClick={this.disableMenu.bind(this)}>{this.props.t("Header.contact")}</a>
-                        <div onClick={this.changeLang.bind(this)}>
+
+                        {["aboutMe", "skills", "portfolio", "contact"].map((e, i) =>
+                            <a
+                                href={`#${e}`}
+                                className='active active-Up'
+                                style={{ "--delay": i + 1 } as React.CSSProperties}
+                                onClick={this.disableMenu.bind(this)}
+                                key={`menu_${i}`}
+                            >
+                                {this.props.t(`Header.${e}`)}
+                            </a>
+                        )}
+
+                        <div className='active active-Up' style={{ "--delay": 5 } as React.CSSProperties} onClick={this.changeLang.bind(this)}>
                             <img src={this.state.currentLang === "pl" ? polandFlag : engFlag} alt="language" />
                         </div>
+
                     </div>
-                    <div id="hambButton" className={this.state.hambActive ? 'open' : ''} onClick={this.showMobileMenu.bind(this)}>
+                    <div
+                        id="hambButton"
+                        className={`${this.state.hambActive ? 'open' : ''} active  active-Up`}
+                        style={{ "--delay": 1 } as React.CSSProperties}
+                        onClick={this.showMobileMenu.bind(this)}
+                    >
                         <div className='hambBtn'></div>
                         <div className='hambBtn'></div>
                         <div className='hambBtn'></div>

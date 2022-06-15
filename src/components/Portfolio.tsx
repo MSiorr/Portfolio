@@ -5,9 +5,12 @@ import ProjectBox from './sub/ProjectBox';
 // import projecsData from "../data/projects.json";
 import { gearProps } from './sub/Gear';
 import GearBase from './sub/GearBase';
-import { mobileStatus } from './Page';
+import { defaultStatus } from './Page';
+
+import './SCSS/Portfolio.scss';
 
 import { withTranslation, WithTranslation } from 'react-i18next';
+import { timeToShow } from './helpers/Functions';
 
 interface oneProj {
     title: string,
@@ -17,9 +20,41 @@ interface oneProj {
     playLink: string
 }
 
-interface myProps extends mobileStatus, WithTranslation { }
+interface myProps extends defaultStatus, WithTranslation {
 
-class Portfolio extends Component<myProps> {
+}
+
+interface myState {
+    sHeader: boolean
+}
+
+class Portfolio extends Component<myProps, myState> {
+
+    private myRef: React.RefObject<HTMLInputElement>;
+
+    constructor(props: myProps) {
+        super(props)
+
+        this.myRef = React.createRef()
+
+        this.state = {
+            sHeader: false
+        }
+    }
+
+    componentDidUpdate() {
+        this.calculateShow();
+    }
+
+    calculateShow() {
+        let top = this.myRef.current?.offsetTop!
+
+
+        if (!this.state.sHeader && timeToShow(top)) {
+            this.setState({ sHeader: true })
+        }
+    }
+
     render() {
         let gearsData: gearProps[] = [
             { isTop: true, isLeft: false, x: '0px', y: '16%', size: 'l' },
@@ -29,11 +64,10 @@ class Portfolio extends Component<myProps> {
             { isTop: true, isLeft: false, x: '0px', y: '94.5%', size: 'l' }
         ]
         let projectsData: Array<oneProj> = this.props.t("Portfolio.projects", { returnObjects: true });
-        console.log(projectsData);
 
         return (
-            <div id="portfolio">
-                <CompHeader title={this.props.t("Header.portfolio")} />
+            <div id="portfolio" ref={this.myRef}>
+                <CompHeader title={this.props.t("Header.portfolio")} show={this.state.sHeader} />
                 <section id="projects" className='restrictedWidth'>
                     {projectsData.map((e, i) => <ProjectBox
                         title={e.title}
@@ -42,11 +76,12 @@ class Portfolio extends Component<myProps> {
                         gitLink={e.gitLink}
                         playLink={e.playLink}
                         swap={i % 2 === 1}
+                        parentTop={this.myRef.current?.offsetTop!}
                         key={`proj_${i}`}
                     />)}
                     {/* <ProjectBox /> */}
                 </section>
-                <GearBase gearsData={gearsData} mobile={this.props.mobile} />
+                <GearBase gearsData={gearsData} mobile={this.props.mobile} scrollY={this.props.scrollY} />
             </div>
         );
     }
@@ -54,10 +89,3 @@ class Portfolio extends Component<myProps> {
 
 
 export default withTranslation()(Portfolio);
-
-// title: string,
-//     description: string,
-//     technologies: string[],
-//     gitLink: string,
-//     playLink: string,
-//     swap: boolean

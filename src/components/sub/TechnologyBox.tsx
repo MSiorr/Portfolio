@@ -9,6 +9,7 @@ import nodejsImg from "../../gfx/technologies/node-js-svgrepo-com.svg";
 import expressImg from "../../gfx/technologies/express-svgrepo-com.svg";
 import pythonImg from "../../gfx/technologies/python-svgrepo-com.svg";
 import unityImg from "../../gfx/technologies/unity.svg";
+import { timeToShow } from '../helpers/Functions';
 
 interface IimgSrc {
     [id: string]: string
@@ -29,13 +30,48 @@ const imgSrc: IimgSrc = {
 interface technologyProps {
     name: string,
     swap: boolean,
-    info: string[]
+    info: string[],
+    parentTop: number,
+    animLeft: boolean
 }
 
-class TechnologyBox extends Component<technologyProps> {
+interface myState {
+    show: boolean
+}
+
+
+class TechnologyBox extends Component<technologyProps, myState> {
+
+    private myRef: React.RefObject<HTMLInputElement>;
+
+    constructor(props: technologyProps) {
+        super(props)
+
+        this.myRef = React.createRef();
+
+        this.state = {
+            show: false
+        }
+    }
+
+    componentDidUpdate() {
+        this.calculateShow();
+
+    }
+
+    calculateShow() {
+        let top = this.myRef.current?.offsetTop!
+
+        if (!this.state.show && timeToShow(this.props.parentTop + top)) {
+            this.setState({
+                show: true
+            })
+        }
+    }
+
     render() {
         return (
-            <div className='technologyBox'>
+            <div className={`technologyBox active ${this.state.show ? this.props.animLeft ? 'active-Left' : 'active-Right' : ''}`} ref={this.myRef}>
                 {this.props.swap ?
                     <>
                         <div className="techInfo">

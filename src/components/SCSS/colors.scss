@@ -1,5 +1,6 @@
 $bg-color: #0B1026;
-$second-color: #F7976F;
+$second-color: #fbb03b;
+// $second-color: #F7976F;
 $third-color: #081833;
 
 $mono-color-1: #95A8FD;
@@ -19,3 +20,5 @@ $main-txt-color: white;
 $my-gray: #8892b0;
 
 $gears-color: #24273b;
+
+$filter-to-second: invert(87%) sepia(18%) saturate(3791%) hue-rotate(329deg) brightness(101%) contrast(97%);
