@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../gfx/logo.png';
+import { ReactComponent as Logo } from '../gfx/logo.svg';
+// import logo from '../gfx/logo.png';
 import polandFlag from '../gfx/poland-svgrepo-com.svg'
 import engFlag from '../gfx/united-kingdom-uk-svgrepo-com.svg'
 import './SCSS/Header.scss';
@@ -76,7 +77,8 @@ class Header extends Component<myProps, myState> {
                 <nav>
                     <div id="navOver" className={this.state.hambActive ? 'show' : 'hide'}></div>
                     <div id="leftHead">
-                        <a href="#home" className='active active-Scale' onClick={this.disableMenu.bind(this)}><img src={logo} alt="logo" id="logo" /></a>
+                        <a href="#home" className='active active-Scale' onClick={this.disableMenu.bind(this)}><Logo /></a>
+                        {/* <a href="#home" className='active active-Scale' onClick={this.disableMenu.bind(this)}><img src={logo} alt="logo" id="logo" /></a> */}
                     </div>
                     <div id="rightHead" className={this.state.hambActive ? 'showNav' : ''}>
 

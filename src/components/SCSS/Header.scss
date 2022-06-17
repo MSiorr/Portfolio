@@ -1,5 +1,8 @@
+@use "sass:color";
+
 @import "colors.scss";
 @import "config.scss";
+
 
 header {
     height: $header-height;
@@ -22,8 +25,9 @@ header {
 
         nav {
             #leftHead {
-                #logo {
+                svg {
                     width: 48px;
+                    height: 48px;
                 }
             }
 
@@ -64,9 +68,16 @@ header {
                 justify-content: center;
                 align-items: center;
 
-                #logo {
+                svg {
                     width: 56px;
+                    height: 56px;
                     transition: width .2s;
+                    color: white;
+                    transition: color .2s;
+
+                    &:hover {
+                        color: color.mix(white, $second-color, 0%)
+                    }
                 }
             }
 

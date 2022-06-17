@@ -17,6 +17,7 @@
         .gearBox {
             position: absolute;
 
+
             &.xs {
                 width: min($gear-xs, 50vw, 50vh);
             }
@@ -37,17 +38,11 @@
                 width: min($gear-xl, 50vw, 50vh);
             }
 
-
-            img {
+            .gearSlide {
+                // animation-direction: reverse;
                 width: 100%;
                 height: 100%;
-                user-select: none;
-
-                &::selection {
-                    color: transparent;
-                    background-color: transparent;
-                }
-
+                animation: showGear .5s ease-out forwards;
 
                 &.left {
                     margin-left: -50%;
@@ -55,29 +50,69 @@
 
                 &.right {
                     margin-left: 50%;
-                    animation-direction: reverse;
                 }
 
-                &.onMobile {
-                    animation-name: spin;
-                    animation-duration: 8s;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    user-select: none;
 
-                @keyframes spin {
-                    0% {
-                        transform: rotate(0);
+                    &::selection {
+                        color: transparent;
+                        background-color: transparent;
                     }
 
-                    100% {
-                        transform: rotate(360deg);
+                    &.left {
+                        margin-left: -50%;
+                    }
+
+                    &.right {
+                        margin-left: 50%;
+                        animation-direction: reverse;
+                    }
+
+                    &.onMobile {
+                        animation-delay: .5s;
+                        animation-name: spin;
+                        animation-duration: 8s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                    }
+
+                    @keyframes spin {
+                        0% {
+                            transform: rotate(0);
+                        }
+
+                        100% {
+                            transform: rotate(360deg);
+                        }
                     }
                 }
 
+                @keyframes showGear {
+                    to {
+                        margin-left: 0;
+                    }
+                }
             }
         }
 
     }
 
 }
+
+
+
+// @keyframes showLeft {
+//     to {
+//         margin-left: 0;
+//     }
+// }
+
+// @keyframes showRight {
+//     to {
+//         margin-left: 100%;
+
+//     }
+// }

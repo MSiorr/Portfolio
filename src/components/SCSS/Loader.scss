@@ -1,0 +1,50 @@
+@import "colors.scss";
+@import "config.scss";
+
+#loaderBack {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 128px;
+        opacity: 1;
+        color: white;
+        animation: hide $loader-hide-time linear forwards;
+        animation-delay: calc($loader-delay-to-hide + $loader-arm-time + $loader-letter-time + $loader-start-delay);
+
+        g {
+            path {
+                stroke-dasharray: 640;
+                stroke-dashoffset: 640;
+                pointer-events: none;
+                animation: show $loader-arm-time ease-in-out forwards;
+                animation-delay: $loader-start-delay;
+
+                &:nth-child(3) {
+                    stroke-dasharray: 300;
+                    stroke-dashoffset: 300;
+                    animation: show $loader-letter-time linear forwards;
+                    animation-delay: calc($loader-arm-time + $loader-start-delay);
+                }
+            }
+        }
+    }
+}
+
+@keyframes show {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}

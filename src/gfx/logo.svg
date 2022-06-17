@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1027.005"
+      height="897.13"
+      version="1.1"
+      viewBox="0 0 271.728 237.366"
+    >
+      <g transform="translate(359.674 15.532)">
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeDasharray="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="4"
+          strokeOpacity="1"
+          strokeWidth="16"
+          d="M-116.362 69.605l-44.393-76.67h-126.11l-48.377 83.89 64.295 108.716h94.244l47.121-82.066"
+        ></path>
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeDasharray="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="4"
+          strokeOpacity="1"
+          strokeWidth="16"
+          d="M-330.49 137.548l43.625 75.819h126.11l47.362-82.677-63.31-109.282h-94.244l-47.915 82.991"
+        ></path>
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeDasharray="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeMiterlimit="2.5"
+          strokeOpacity="1"
+          strokeWidth="18"
+          d="M-255.327 132.341l.204-60.7 30.987 34.716 31.593-35.905-.293 61.951"
+        ></path>
+      </g>
+    </svg>

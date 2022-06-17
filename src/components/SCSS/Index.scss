@@ -34,6 +34,8 @@ html {
   scrollbar-width: thin;
   scroll-behavior: smooth;
   scroll-padding: $header-height;
+  width: 100vw;
+  max-width: 100%;
 }
 
 #root {

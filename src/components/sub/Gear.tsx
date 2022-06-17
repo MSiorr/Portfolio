@@ -47,9 +47,11 @@ class Gear extends Component<gearProps, myState> {
                         this.props.isTop ? { right: this.props.x, top: this.props.y } : { right: this.props.x, bottom: this.props.y }
                 }
             >
-                <img src={gearSVG} alt="gear img" className={`${this.props.isLeft ? 'left' : 'right'} ${this.props.mobile ? 'onMobile' : ''}`}
-                    style={{ transform: `rotate(${this.props.isLeft ? this.state.currentDeg : -this.state.currentDeg}deg)` }}
-                />
+                <div className={`gearSlide ${this.props.isLeft ? 'left' : 'right'}`}>
+                    <img src={gearSVG} alt="gear img" className={`${this.props.isLeft ? 'left' : 'right'} ${this.props.mobile ? 'onMobile' : ''}`}
+                        style={{ transform: `rotate(${this.props.isLeft ? this.state.currentDeg : -this.state.currentDeg}deg)` }}
+                    />
+                </div>
             </div>
         );
     }
