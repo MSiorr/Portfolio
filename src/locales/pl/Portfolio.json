@@ -18,7 +18,7 @@
             "title": "Castle Royale",
             "description": "Logiczna gra multiplayer 1v1 napisana w 2 osoby. Celem jest dotarcie postaciami w odpowiednie miejsca.",
             "technologies": [
-                "Three.JS",
+                "Three.js",
                 "Sass",
                 "JavaScript",
                 "HTML",
@@ -59,7 +59,7 @@
             "title": "Threejs Shooter",
             "description": "Projekt gry 3D, pozwalający na stworzenie własnego poziomu, a następnie na próbie jego przejścia. Dostępna jest również tabela wyników.",
             "technologies": [
-                "Three.JS",
+                "Three.js",
                 "JavaScript",
                 "HTML",
                 "CSS",

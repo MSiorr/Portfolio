@@ -9,7 +9,7 @@
                 "klasy statyczne",
                 "Listy",
                 "Pętle",
-                "Events"
+                "Zdarzenia"
             ]
         },
         {
@@ -18,7 +18,7 @@
                 "Typowanie",
                 "Interfejsy",
                 "Enumy",
-                "Generyki"
+                "Typy generyczne"
             ]
         },
         {
@@ -37,7 +37,7 @@
                 "Style",
                 "Flex",
                 "Grid",
-                "Responsywnośc"
+                "Responsywność"
             ]
         },
         {
@@ -64,7 +64,7 @@
             "name": "Node.JS",
             "info": [
                 "System plików",
-                "Events",
+                "Zdarzenia",
                 "Moduł URL",
                 "Metody HTTP"
             ]

@@ -18,7 +18,7 @@
             "title": "Castle Royale",
             "description": "Logical 1v1 multiplayer game written in a team of two. The goal is to get the characters to the right places.",
             "technologies": [
-                "Three.JS",
+                "Three.js",
                 "Sass",
                 "JavaScript",
                 "HTML",
@@ -59,7 +59,7 @@
             "title": "Threejs Shooter",
             "description": "3D shooter game, allowing you to create your own level and then attempt to finish it. Scoreboard of highest scores is available.",
             "technologies": [
-                "Three.JS",
+                "Three.js",
                 "JavaScript",
                 "HTML",
                 "CSS",
