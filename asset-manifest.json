@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.1a4c9b09.css",
+    "main.js": "/Portfolio/static/js/main.84a62930.js",
+    "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/threejsShooter.png": "/Portfolio/static/media/threejsShooter.d3c2bcddc65b8afb3d78.png",
+    "static/media/castleRoyale.png": "/Portfolio/static/media/castleRoyale.60d4857769c474f54719.png",
+    "static/media/ludo.png": "/Portfolio/static/media/ludo.50754b2d61ad71e38284.png",
+    "static/media/drMario.png": "/Portfolio/static/media/drMario.5a7663739a379865073b.png",
+    "static/media/wolfenstein3d.png": "/Portfolio/static/media/wolfenstein3d.58dcb4f2ae60f73dff52.png",
+    "static/media/logo.png": "/Portfolio/static/media/logo.e3b74680e50cd162e6c3.png",
+    "static/media/node-js-svgrepo-com.svg": "/Portfolio/static/media/node-js-svgrepo-com.b6b29e86e448294bb9751985263c4519.svg",
+    "static/media/express-svgrepo-com.svg": "/Portfolio/static/media/express-svgrepo-com.1b3ce31c24c1f274c69424dc94ac07a8.svg",
+    "static/media/react-svgrepo-com.svg": "/Portfolio/static/media/react-svgrepo-com.fdd3331d261ad6d5e1c92448737aa2aa.svg",
+    "static/media/united-kingdom-uk-svgrepo-com.svg": "/Portfolio/static/media/united-kingdom-uk-svgrepo-com.efbb45c612ecb456bd90f0194449ac22.svg",
+    "static/media/gamepad-svgrepo-com.svg": "/Portfolio/static/media/gamepad-svgrepo-com.89974defe8ae37caf78cfca385b9e5ae.svg",
+    "static/media/javascript-svgrepo-com.svg": "/Portfolio/static/media/javascript-svgrepo-com.fd46ca41839433d73577989d86eb2fe2.svg",
+    "static/media/python-svgrepo-com.svg": "/Portfolio/static/media/python-svgrepo-com.42f87cb3c004a68af35276b967671a1c.svg",
+    "static/media/settings-gear-svgrepo-com.svg": "/Portfolio/static/media/settings-gear-svgrepo-com.e2010541e51e6082495d8599041ad611.svg",
+    "static/media/letter-svgrepo-com.svg": "/Portfolio/static/media/letter-svgrepo-com.6253d0ba68574efea8439d7ad733f015.svg",
+    "static/media/github-svgrepo-com.svg": "/Portfolio/static/media/github-svgrepo-com.fc0ffe042a9582d2a394e1c609baa9f2.svg",
+    "static/media/typescript-logo-svgrepo-com.svg": "/Portfolio/static/media/typescript-logo-svgrepo-com.7c2e5f599fa6ccab4be8a590908ec5bb.svg",
+    "static/media/poland-svgrepo-com.svg": "/Portfolio/static/media/poland-svgrepo-com.9954e2650e4bddd961114983b3c1b0ea.svg",
+    "static/media/html-5-logo-svgrepo-com.svg": "/Portfolio/static/media/html-5-logo-svgrepo-com.06bb2c6ad6581edd4df0b5f67fe7cd87.svg",
+    "static/media/css-3-logo-svgrepo-com.svg": "/Portfolio/static/media/css-3-logo-svgrepo-com.1750813274ceb22f0e3648523254cdce.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/unity.svg": "/Portfolio/static/media/unity.92ac326567f4b971e3673419fedaba1c.svg",
+    "main.1a4c9b09.css.map": "/Portfolio/static/css/main.1a4c9b09.css.map",
+    "main.84a62930.js.map": "/Portfolio/static/js/main.84a62930.js.map",
+    "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a4c9b09.css",
+    "static/js/main.84a62930.js"
+  ]
+}
