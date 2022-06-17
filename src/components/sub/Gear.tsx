@@ -25,24 +25,9 @@ class Gear extends Component<gearProps, myState> {
         }
     }
 
-
-    // componentDidMount() {
-    //     if (!this.props.mobile) {
-    //         window.addEventListener('scroll', this.calcDeg.bind(this));
-    //         this.calcDeg();
-    //     }
-    // }
-
-    // componentWillUnmount() {
-    //     if (!this.props.mobile) {
-    //         window.removeEventListener('scroll', this.calcDeg.bind(this));
-    //     }
-    // }
-
     componentDidUpdate() {
         this.calcDeg();
     }
-
 
     calcDeg() {
         if (this.state.currentDeg !== window.scrollY / 8) {

@@ -67,7 +67,6 @@ header {
                 #logo {
                     width: 56px;
                     transition: width .2s;
-                    // width: 48px;
                 }
             }
 
@@ -81,13 +80,10 @@ header {
 
             a,
             div {
-                // height: 100%;
-                // display: block;
                 margin: 0 10px;
                 color: $main-txt-color;
                 text-decoration: none;
                 font-size: calc($header-font-size * 1.15);
-                // font-size: $header-font-size;
                 transition: padding .1s, color .1s, font-size .2s;
                 cursor: pointer;
 
@@ -107,7 +103,6 @@ header {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            // background-color: red;
             width: 32px;
             height: 24px;
             margin-right: 24px;

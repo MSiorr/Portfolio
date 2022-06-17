@@ -1,5 +1,5 @@
 import React from 'react';
-import './SCSS/App.scss';
+import './SCSS/Index.scss';
 import Header from './Header';
 import Page from './Page';
 import Footer from './Footer';
@@ -12,7 +12,6 @@ function App() {
 
   return (
     <div id="app">
-      {/* {detectMobile() ? null : <Background />} */}
       <Background count={detectMobile() ? 24 : 64} />
       <Header />
       <Page mobile={detectMobile()} />

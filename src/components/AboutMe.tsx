@@ -6,7 +6,7 @@ import GearBase from './sub/GearBase';
 
 import './SCSS/AboutMe.scss';
 
-import { withTranslation, WithTranslation } from 'react-i18next';
+import { Trans, withTranslation, WithTranslation } from 'react-i18next';
 import { timeToShow } from './helpers/Functions';
 
 interface myProps extends defaultStatus, WithTranslation {
@@ -71,10 +71,16 @@ class AboutMe extends Component<myProps, myState> {
                         {this.props.t("AboutMe.hi")}
                     </p>
                     <p id="infoAboutMe" className={`active ${this.state.sTxt ? `active-Down` : ''}`} style={{ "--delay": 1 } as React.CSSProperties}>
-                        {this.props.t("AboutMe.info1")}
+                        <Trans i18nKey="AboutMe.info1" components={{
+                            GitLink: <a target='_blank' rel='noreferrer' href='https://github.com/MSiorr'>link</a>,
+                            GameLink: <a target='_blank' rel='noreferrer' href='https://steamcommunity.com/id/msiorr/' >link</a>,
+                        }} />
                     </p>
                     <p id="experience" className={`active ${this.state.sTxt ? `active-Down` : ''}`} style={{ "--delay": 2 } as React.CSSProperties}>
-                        {this.props.t("AboutMe.info2")}
+                        <Trans i18nKey="AboutMe.info2" components={{
+                            SchoolLink: <a target='_blank' rel='noreferrer' href='https://tl.krakow.pl/' >link</a>,
+                            TechTitle: <a target='_blank' rel='noreferrer' href='https://kwalifikacje.gov.pl/k?id_kw=12575' >link</a>
+                        }} />
                     </p>
                 </section>
                 <GearBase gearsData={gearsData} mobile={this.props.mobile} scrollY={this.props.scrollY} />

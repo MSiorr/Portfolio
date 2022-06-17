@@ -79,8 +79,6 @@ class ProjectBox extends Component<myProps, myState> {
                         <div className="projectButtons">
                             <a href={this.props.gitLink} rel="noreferrer" target="_blank"> <img alt="GitHub icon" src={gitHubIcon} className="gitImg" /> GITHUB</a>
                             <a href={this.props.playLink} rel="noreferrer" target="_blank"> <img alt="GamePad icon" src={gamepadIcon} className="gameImg" /> {this.props.t("Portfolio.play")}</a>
-                            {/* <button> <img alt="GitHub icon" src={gitHubIcon} className="gitImg" /> GITHUB</button>
-                            <button> <img alt="GamePad icon" src={gamepadIcon} className="gameImg" /> PLAY</button> */}
                         </div>
                     </div>
                     <p className='projectTech'>{this.props.technologies.map((e, i) => i === 0 ? `${e}` : ` ${e}`)}</p>

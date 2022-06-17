@@ -66,11 +66,11 @@ class Contact extends Component<myProps, myState> {
                     <div id="contactInfo">
                         <div id="writeToMe" className={`active ${this.state.show ? 'active-Down' : ''}`} ref={this.myRef2}>
                             <h1>{this.props.t("Contact.contactMe")}</h1>
-                            <a href="/#"> <img alt="GitHub icon" src={letterIcon} /> michaldakol@gmail.com</a>
+                            <a href="mailto:michaldakol@gmail.com"> <img alt="GitHub icon" src={letterIcon} /> michaldakol@gmail.com</a>
                         </div>
                         <div id="myGithub" className={`active ${this.state.show ? 'active-Down' : ''}`} style={{ "--delay": 1 } as React.CSSProperties}>
                             <h1>{this.props.t("Contact.myGit")}</h1>
-                            <a href="/#"> <img alt="GitHub icon" src={gitHubIcon} /> MSiorr</a>
+                            <a href="https://github.com/MSiorr" target="_blank" rel="noreferrer"> <img alt="GitHub icon" src={gitHubIcon} /> MSiorr</a>
                         </div>
                     </div>
                 </section>

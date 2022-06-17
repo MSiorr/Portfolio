@@ -7,8 +7,6 @@
     section {
         margin: 8px auto;
         min-height: calc(100vh - $header-height - $component-title-height - 8px);
-
-        // margin: 0 auto;
         text-align: center;
         padding-bottom: 120px;
 
@@ -31,7 +29,6 @@
                 height: $technology-box-height;
                 border-radius: 12px;
                 background-color: rgba(lighten($bg-color, 6%), 96%);
-                // background-color: $third-color;
                 box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
                 margin: $technology-box-margin;
                 display: flex;

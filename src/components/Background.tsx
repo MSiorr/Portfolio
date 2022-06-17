@@ -30,7 +30,6 @@ class Background extends Component<myProps> {
         }
         return (
             <Particles options={options} init={this.customInit} />
-            // <div></div>
         )
     }
 }

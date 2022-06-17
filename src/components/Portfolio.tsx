@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CompHeader from './sub/CompHeader';
 import ProjectBox from './sub/ProjectBox';
 
-// import projecsData from "../data/projects.json";
 import { gearProps } from './sub/Gear';
 import GearBase from './sub/GearBase';
 import { defaultStatus } from './Page';

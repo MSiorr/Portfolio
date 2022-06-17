@@ -11,5 +11,34 @@ footer {
     p {
         margin: 6px 0;
         font-size: 18px;
+
+        span {
+
+            position: relative;
+            padding-bottom: 2px;
+
+            a {
+                color: $second-color;
+                text-decoration: none;
+            }
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 2px;
+                position: absolute;
+                border-radius: 12px;
+                bottom: 0;
+                left: 0;
+                background-color: $second-color;
+                transition: width .2s;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
     }
 }

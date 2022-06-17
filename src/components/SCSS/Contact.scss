@@ -41,7 +41,7 @@
                 font-size: clamp(18px, 2.8vw, 24px);
                 color: white;
                 text-decoration: underline;
-                transition: transform .2s;
+                transition: transform .2s, color .2s;
 
                 &:hover {
                     color: $second-color;

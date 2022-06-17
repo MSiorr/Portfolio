@@ -13,7 +13,6 @@ body {
   width: 100vw;
   max-width: 100%;
   overflow: overlay;
-  // overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -39,8 +38,6 @@ html {
 
 #root {
   overflow-x: hidden;
-  // contain: paint;
-
 }
 
 #app {
@@ -74,9 +71,7 @@ html {
 
 main {
   min-height: 100vh;
-  // min-height: calc(100vh - $header-height);
   margin: 0 auto;
-  // overflow-x: hidden;
 
   .compHeader {
     height: $component-title-height;
@@ -95,7 +90,6 @@ main {
 
     .compTitle {
       font-size: clamp(44px, 9vw, 90px);
-      // font-size: $component-title-font-size;
       text-align: center;
       font-family: $component-title-font;
       z-index: 10;
@@ -120,13 +114,6 @@ main {
     z-index: -2 !important;
   }
 }
-
-// @media screen and (max-width: 1200px) {
-//   main {
-
-//   }
-// }
-
 
 @media screen and (max-width: $breakpoint-3) {
   .restrictedWidth {
@@ -240,7 +227,3 @@ main {
     transform: scale(1);
   }
 }
-
-
-// scroll behaviour
-// scroll padding

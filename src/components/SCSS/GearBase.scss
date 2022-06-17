@@ -8,7 +8,6 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    // background-color: rgba(255, 255, 255, 0.2);
 
     .gearBase {
         position: relative;
@@ -16,9 +15,6 @@
         height: 100%;
 
         .gearBox {
-            // width: $gear-xl;
-            // height: $gear-xl;
-            // width: min($gear-xl, 50vw, 50vh);
             position: absolute;
 
             &.xs {
@@ -45,6 +41,12 @@
             img {
                 width: 100%;
                 height: 100%;
+                user-select: none;
+
+                &::selection {
+                    color: transparent;
+                    background-color: transparent;
+                }
 
 
                 &.left {

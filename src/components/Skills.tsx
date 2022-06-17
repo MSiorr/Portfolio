@@ -7,7 +7,6 @@ import TechnologyBox from './sub/TechnologyBox';
 
 import './SCSS/Skills.scss';
 
-// import techData from '../data/technologies.json';
 import { withTranslation, WithTranslation } from 'react-i18next';
 import { timeToShow } from './helpers/Functions';
 import { technologyBreakpoint } from './helpers/Var';
