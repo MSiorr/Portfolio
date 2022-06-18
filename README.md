@@ -12,7 +12,7 @@ Own Portfolio
 
 This is my portfolio project.
 
-The aim was to create something of my own where I could show some of my skills
+The aim was to create something of my own where I could show some of my skills.
 
 ## Installation
 
