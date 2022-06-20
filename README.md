@@ -27,5 +27,6 @@ The aim was to create something of my own where I could show some of my skills.
 <p>
  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=white&style=for-the-badge" /> 
  <img src="https://img.shields.io/badge/Sass-CC6699?logo=Sass&logoColor=white&style=for-the-badge" /> 
+ <img src="https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=black&style=for-the-badge" /> 
  <img src="https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white&style=for-the-badge" /> 
 </p>
