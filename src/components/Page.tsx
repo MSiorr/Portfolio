@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AboutMe from './AboutMe';
 import Contact from './Contact';
+import { GA } from './helpers/GoogleAnalytics';
 import Home from './Home';
 import Portfolio from './Portfolio';
 import Skills from './Skills';
@@ -28,6 +29,7 @@ class Page extends Component<defaultStatus, myState> {
 
 
     componentDidMount() {
+        GA.send('pageview');
         window.addEventListener('scroll', this.calcScroll.bind(this));
         this.calcScroll();
         window.onresize = this.updateWidth.bind(this);
